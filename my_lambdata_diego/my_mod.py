@@ -1,4 +1,5 @@
 # my_script.py
+import numpy as np
 
 #enlarge function
 
