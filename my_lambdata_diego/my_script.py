@@ -6,7 +6,7 @@ from my_lambdata_diego.my_mod import enlarge
 
 print("HELLO")
 
-df = DataFrame({"a":[1,2,3], "b":[4,5,6]})
+df = DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
 
 print(df.head())
 
