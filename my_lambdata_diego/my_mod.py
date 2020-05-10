@@ -1,6 +1,7 @@
 # my_script.py
 
-#enlarge function
+# enlarge function
+
 
 def enlarge(n):
     return n * 100
