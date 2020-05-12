@@ -1,34 +1,26 @@
-# my_lambdata/assignment.py
+from pandas import DataFrame
 
-import pandas
+class DataProcessor():
+    def __init__(self, something_else):
+        """
+        Params: something_else (pandas.DataFrame) has a column called "abbrev" with state abbreviations
+        """
+        self.df = something_else
 
-# State abbreviation -> Full Name and visa versa.
-# FL -> Florida, etc.
-# (Handle Washington DC and territories like Puerto Rico etc.)
-
-def add_state_names(my_df):
-    """ Param my_df pandas dataframe with column name "abbrevs" """
-    new_df = my_df.copy() # don't mutate existing df (just a pref, you could mutate and not return anything if you want)
-    names_map = {
-        "CA": "Cali",
-        "CO": "Colo",
-        "CT": "Conn",
-        "DC": "Wash DC",
-        "TX": "Texas"
-    }
-    #breakpoint()
-    my_col = new_df["abbrevs"]
-    other_col = my_col.map(names_map)
-    new_df["state_name"] = other_col
-    return new_df
+    def add_state_names(self):
+        """
+        Adds a column of state names to accompany a corresponding column of state abbreviation.
+        """
+        names_map = {"CA":"Cali", "CO":"Colo", "CT":"Conn"}
+        self.df["name"] = self.df["abbrev"].map(names_map) # see: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html
+        return self.df
 
 if __name__ == "__main__":
-    #print("hahahah")
-    #input(".............")
 
-    df = pandas.DataFrame({"abbrevs": ["CA", "CO", "CT", "DC", "TX"]})
-    print(type(df))
-    print(df.head())
+    df = DataFrame({"abbrev": ["CA", "CO", "CT", "DC", "TX"]})
 
-    df2 = add_state_names(df)
-    print(df2.head())
+    processor = DataProcessor(df)
+    print(processor.df.head())
+
+    processor.add_state_names()
+    print(processor.df.head())
