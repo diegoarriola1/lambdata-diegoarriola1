@@ -6,7 +6,11 @@ verify_ssl = true
 [dev-packages]
 twine = "*"
 autopep8 = "*"
+<<<<<<< HEAD
 black = "*"
+=======
+v = {editable = true,version = "*"}
+>>>>>>> c8c064ae4d07db9eabce867e55b017a6b013c473
 
 [packages]
 pandas = "*"

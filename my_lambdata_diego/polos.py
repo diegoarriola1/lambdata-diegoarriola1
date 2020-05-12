@@ -2,6 +2,7 @@
 
 
 
+<<<<<<< HEAD
 class Polo:
     def __init__(self, size, color, price=69.99):
         self.size = size
@@ -22,3 +23,11 @@ if __name__ == "__main__":
     polo2 = Polo(size="Small", color="Yellow")
     print(polo.size, polo.color, polo.price)
     polo2.wash()
+=======
+
+if __name__ == "__main__":
+
+    df = DataFrame(______)
+
+    polo = Polo()
+>>>>>>> c8c064ae4d07db9eabce867e55b017a6b013c473

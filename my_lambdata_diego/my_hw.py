@@ -5,7 +5,9 @@ import pandas as pd
 
 # new function from HW
 
-def train_validate_test_split(df, train_percent=.6, validate_percent=.2, seed=None):
+
+def train_validate_test_split(
+        df, train_percent=.6, validate_percent=.2, seed=None):
     np.random.seed(seed)
     perm = np.random.permutation(df.index)
     m = len(df.index)
