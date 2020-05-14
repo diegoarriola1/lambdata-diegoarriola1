@@ -2,15 +2,15 @@
 
 ## Installation
 
-TODO
+'''sh
+pip install -i https://test.pypi.org/simple/ my-lambdata-diego
+'''
 
-## Usage 
+## Usage
 
 '''py
-
 from my_lambdata_diego.my_mod import enlarge
 
 x = 11
 print(enlarge(x))
-
 '''

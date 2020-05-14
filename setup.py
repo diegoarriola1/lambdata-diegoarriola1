@@ -17,5 +17,5 @@ setup(
     # license="MIT",
     url="https://github.com/diegoarriola1/lambdata-diegoarriola1",
     # keywords="",
-    packages=find_packages()  # ["my_lambdata"]
+    packages=["my_lambdata_diego"]  # ["my_lambdata"]
 )
