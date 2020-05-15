@@ -18,11 +18,11 @@ def train_validate_test_split(
     test = df.iloc[perm[validate_end:]]
     return train, validate, test
 
-# np.random.seed([3,1415])
-# df = pd.DataFrame(np.random.rand(10, 5), columns=list('ABCDE'))
+np.random.seed([3,1415])
+df = pd.DataFrame(np.random.rand(10, 5), columns=list('ABCDE'))
 
-# train, validate, test = train_validate_test_split(df)
+train, validate, test = train_validate_test_split(df)
 
-# print(train)
-# print(validate)
-# print(test)
+print(train)
+print(validate)
+print(test)
