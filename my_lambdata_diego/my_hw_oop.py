@@ -4,25 +4,26 @@
 import numpy as np
 import pandas as pd
 
-# func into class
-
-# class Auto():
-#     def __init__(self, make, model, year, color, num_wheels):
-#         self.make = make
-#         self.model = model
-#         self.year = year
-#         self.color = color
-#         self.num_wheels = num_wheels
 
 
 class TVTSProcessor():
     def __init__(self, df, train_percent=.6, validate_percent=.2, seed=None):
+        """
+        Params: df is the dataframe you want to split
+                train_percent is percentage you want in the train data set
+                validate_percent is percentage you want in the validation data set
+                seed creates a random seed for reproducibility
+        """
         self.df = df
         self.train_percent = train_percent
         self.validate_percent = validate_percent
         self.seed = seed
 
     def split(self):
+        """
+        Uses arguments passed in the instantiation of class to split into
+        and return train, validation and test datasets in that order.
+        """
         np.random.seed(self.seed)
         perm = np.random.permutation(self.df.index)
         m = len(self.df.index)
